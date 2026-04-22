@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #eef3ff;
+    --color-surface: #f8fbff;
+    --color-surface-muted: #dbeafe;
+    --color-text: #0b1f57;
+    --color-text-soft: #1e3a8a;
+    --color-accent: #f6c20f;
+    --color-accent-dark: #d39b00;
+    --color-brand: #003da5;
+    --color-brand-soft: #1d4ed8;
+    --color-support: #2563eb;
+  }
+
+  * {
+    border-color: #e2e8f0;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(246, 194, 15, 0.24) 0%, rgba(246, 194, 15, 0) 30%),
+      radial-gradient(circle at 100% 0%, rgba(0, 61, 165, 0.2) 0%, rgba(0, 61, 165, 0) 40%),
+      radial-gradient(circle at 50% 100%, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0) 30%),
+      var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Fraunces', serif;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: var(--color-text-soft);
+  }
+
+  ::selection {
+    background-color: rgba(246, 194, 15, 0.4);
+    color: var(--color-brand);
+  }
+  
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}   
+
+@layer components {
+  .app-shell {
+    background:
+      linear-gradient(180deg, rgba(248, 251, 255, 0.96) 0%, rgba(239, 246, 255, 0.94) 100%);
+  }
+
+  .app-main {
+    background:
+      radial-gradient(circle at 10% 0%, rgba(246, 194, 15, 0.1) 0%, rgba(246, 194, 15, 0) 32%),
+      radial-gradient(circle at 90% 0%, rgba(0, 61, 165, 0.1) 0%, rgba(0, 61, 165, 0) 36%);
+  }
+
+  .auth-shell {
+    background:
+      linear-gradient(145deg, rgba(0, 61, 165, 0.1) 0%, rgba(246, 194, 15, 0.12) 50%, rgba(37, 99, 235, 0.1) 100%);
+  }
+}
